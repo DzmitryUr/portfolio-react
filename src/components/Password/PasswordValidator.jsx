@@ -1,5 +1,8 @@
-import { evaluatePasswordStrength } from "../../utils/password";
 import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+
+import { evaluatePasswordStrength } from "../../utils/password";
+
 import "./PasswordValidator.css";
 
 function PasswordValidator() {
@@ -29,9 +32,12 @@ function PasswordValidator() {
           onChange={handleChange}
           placeholder="Enter your password"
         />
-        <button onClick={togglePasswordVisibility}>
-          {isPasswordVisible ? "Hide" : "Show"}
-        </button>
+        <span
+          className="password-toggle-icon"
+          onClick={togglePasswordVisibility}
+        >
+          {isPasswordVisible ? <FaEyeSlash /> : <FaEye />}
+        </span>
       </div>
       {strength && (
         <p>
