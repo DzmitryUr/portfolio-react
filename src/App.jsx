@@ -3,6 +3,8 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
+import { FaHome, FaInfo, FaList } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 import "./App.css";
 
 function App() {
@@ -11,16 +13,24 @@ function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/">
+              <FaHome /> <span className="padding-left-2">Home</span>
+            </Link>
           </li>
           <li>
-            <Link to="/about"> About</Link>
+            <Link to="/about">
+              <FaInfo /> <span className="padding-left-2"> About</span>
+            </Link>
           </li>
           <li>
-            <Link to="/projects"> Projects</Link>
+            <Link to="/projects">
+              <FaList /> <span className="padding-left-2">Projects</span>
+            </Link>
           </li>
           <li>
-            <Link to="/contact"> Contact</Link>
+            <Link to="/contact">
+              <MdEmail /> <span className="padding-left-2">Contact</span>
+            </Link>
           </li>
         </ul>
       </nav>
